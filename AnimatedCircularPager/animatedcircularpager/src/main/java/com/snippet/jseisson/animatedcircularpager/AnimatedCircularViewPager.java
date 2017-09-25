@@ -14,7 +14,7 @@ public class AnimatedCircularViewPager extends ViewPager {
 
     private static int DEFAULT_DELAY = 3000;
 
-    private final int delay;
+    private int delay;
     private Timer timer;
     private CircularTimerTask timerTask;
 
@@ -30,6 +30,11 @@ public class AnimatedCircularViewPager extends ViewPager {
 
     public AnimatedCircularViewPager(Context context) {
         this(context, null);
+    }
+
+    public AnimatedCircularViewPager(Context context, int delay) {
+        this(context, null);
+        this.delay = delay;
     }
 
     @Override
@@ -51,6 +56,10 @@ public class AnimatedCircularViewPager extends ViewPager {
             timer.cancel();
             timer = null;
         }
+    }
+
+    public void setDelay(int delay) {
+        this.delay = delay;
     }
 
     private class CircularTimerTask extends TimerTask {
