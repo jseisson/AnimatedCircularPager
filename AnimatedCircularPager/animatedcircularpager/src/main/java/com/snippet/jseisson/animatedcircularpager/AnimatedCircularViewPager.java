@@ -2,6 +2,7 @@ package com.snippet.jseisson.animatedcircularpager;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -20,7 +21,11 @@ public class AnimatedCircularViewPager extends ViewPager {
     public AnimatedCircularViewPager(Context context, AttributeSet attrs) {
         super(context, attrs);
         setEnabled(false);
-        delay = DEFAULT_DELAY;
+        TypedArray a = context.getTheme().obtainStyledAttributes(
+                attrs,
+                R.styleable.animatedCircularViewPager,
+                0, 0);
+        delay = a.getInteger(R.styleable.animatedCircularViewPager_delayInMillis, DEFAULT_DELAY);
     }
 
     public AnimatedCircularViewPager(Context context) {
