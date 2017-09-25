@@ -14,12 +14,25 @@ public abstract class AnimatedCircularPagerAdapter<L extends List> extends Pager
 
     @Override
     public int getCount() {
-        return list.size();
+        if (list != null) {
+            return list.size();
+        } else {
+            return 0;
+        }
     }
 
     // This method duplicate the first item of list and place it to the last position to allow a fake circular
     private L prepareListForCircularPager(L list) {
-        list.add(list.get(0));
-        return list;
+        if (list != null) {
+            list.add(list.get(0));
+            return list;
+        } else {
+            return null;
+        }
+    }
+
+    public void setList(L list) {
+        this.list = prepareListForCircularPager(list);
+        notifyDataSetChanged();
     }
 }

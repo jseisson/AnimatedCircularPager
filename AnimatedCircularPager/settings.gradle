@@ -1,1 +1,1 @@
-include ':demo', ':animatedcircularpager'
+include ':demo', ':library'

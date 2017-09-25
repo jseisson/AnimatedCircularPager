@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AnimatedCircularPager.iml" filepath="$PROJECT_DIR$/AnimatedCircularPager.iml" />
-      <module fileurl="file://$PROJECT_DIR$/animatedcircularpager/animatedcircularpager.iml" filepath="$PROJECT_DIR$/animatedcircularpager/animatedcircularpager.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>
 </project>

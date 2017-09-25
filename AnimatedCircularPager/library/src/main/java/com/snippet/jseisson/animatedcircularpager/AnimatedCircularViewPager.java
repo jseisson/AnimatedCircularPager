@@ -40,7 +40,7 @@ public class AnimatedCircularViewPager extends ViewPager {
     @Override
     public void setAdapter(PagerAdapter adapter) {
         if (!(adapter instanceof AnimatedCircularPagerAdapter)) {
-            throw new IllegalStateException("Adapter must implements AnimatedCircularPagerAdapter");
+            throw new IllegalArgumentException("Adapter must implements AnimatedCircularPagerAdapter");
         }
         super.setAdapter(adapter);
     }
